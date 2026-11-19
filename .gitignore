@@ -1,3 +1,9 @@
+# py ignore
+.mypy_cache
+.pytest_cache
+.ruff_cache
 .venv
-.vscode
 library_api.egg-info
+
+# vscode ignore
+.vscode
