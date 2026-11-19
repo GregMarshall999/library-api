@@ -28,6 +28,7 @@ include = ["app*"]
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 addopts = "-ra --strict-markers"
+filterwarnings = ["error"]
 markers = [
     "integration: tests that need a real PostgreSQL database",
     "e2e: tests against the running Docker stack",

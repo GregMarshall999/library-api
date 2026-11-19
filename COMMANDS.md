@@ -1,10 +1,16 @@
+# init
+
+source .venv/bin/activate
+pip install --upgrade pip
+pip install -e ".[dev]"
+
 # tests
 
-pytest                    # run tests
-pytest --cov=app          # same, plus a coverage table
-ruff check .              # expect: All checks passed!
-ruff format .             # auto-formats the code
-mypy app                  # expect: Success: no issues found
+pytest
+pytest --cov=app --cov-report=term-missing
+ruff check .
+ruff format .
+mypy app tests
 
 # app
 
