@@ -19,8 +19,8 @@ def test_database_rejects_two_active_loans_for_the_same_book(
     members = SqlMemberRepository(db_session)
     alice = members.add(Member(name="Alice", email="alice@example.com"))
     bob = members.add(Member(name="Bob", email="bob@example.com"))
-    assert book.id is not None 
-    assert alice.id is not None 
+    assert book.id is not None
+    assert alice.id is not None
     assert bob.id is not None
     loans = SqlLoanRepository(db_session)
     loans.add(Loan(book_id=book.id, member_id=alice.id, borrowed_at=now))
@@ -37,8 +37,8 @@ def test_loan_service_works_unchanged_on_postgres(db_session: Session, now: date
     book = books.add(Book(title="Dune", author="Frank Herbert"))
     alice = members.add(Member(name="Alice", email="alice@example.com"))
     bob = members.add(Member(name="Bob", email="bob@example.com"))
-    assert book.id is not None 
-    assert alice.id is not None 
+    assert book.id is not None
+    assert alice.id is not None
     assert bob.id is not None
 
     service.borrow(book_id=book.id, member_id=alice.id)

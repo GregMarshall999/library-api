@@ -35,7 +35,7 @@ def _new_loan(repos: Repos, now: datetime) -> Loan:
     """Store a book, a member and an active loan between them."""
     book = repos.books.add(Book(title="Dune", author="Frank Herbert"))
     member = repos.members.add(Member(name="Alice", email="alice@example.com"))
-    assert book.id is not None 
+    assert book.id is not None
     assert member.id is not None
     return repos.loans.add(Loan(book_id=book.id, member_id=member.id, borrowed_at=now))
 
