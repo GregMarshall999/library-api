@@ -8,8 +8,8 @@ class Settings(BaseSettings):
 
     model_config = SettingsConfigDict(env_file=".env", extra="ignore")
 
-    database_url: str = ""
-    test_database_url: str = ""
+    database_url: str = "postgresql+psycopg://library:library@localhost:5432/library"
+    test_database_url: str = "postgresql+psycopg://library:library@localhost:5432/library_test"
 
 
 @lru_cache
