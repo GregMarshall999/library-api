@@ -4,9 +4,13 @@
 .ruff_cache
 .venv
 *.egg-info/
-.coverage
 
 # vscode ignore
 .vscode
 
 .env
+
+#coverage
+.coverage
+reports/
+coverage.xml
