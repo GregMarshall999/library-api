@@ -7,3 +7,5 @@ library_api.egg-info
 
 # vscode ignore
 .vscode
+
+.env

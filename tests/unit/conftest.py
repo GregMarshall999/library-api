@@ -1,5 +1,5 @@
 from collections.abc import Callable
-from datetime import UTC, datetime
+from datetime import datetime
 
 import pytest
 
@@ -10,11 +10,6 @@ from app.repositories.in_memory import (
     InMemoryMemberRepository,
 )
 from app.services.loan_service import LoanService
-
-
-@pytest.fixture
-def now() -> datetime:
-    return datetime(2026, 1, 15, 10, 0, tzinfo=UTC)
 
 
 @pytest.fixture
