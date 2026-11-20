@@ -18,6 +18,10 @@ ruff check .
 ruff format .
 mypy app tests
 
+# e2e
+
+E2E_BASE_URL=http://localhost:8000 pytest -m e2e -v
+
 # app
 
 uvicorn app.main:app --reload

@@ -3,7 +3,8 @@
 .pytest_cache
 .ruff_cache
 .venv
-library_api.egg-info
+*.egg-info/
+.coverage
 
 # vscode ignore
 .vscode
